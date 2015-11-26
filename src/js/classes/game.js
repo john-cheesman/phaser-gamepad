@@ -20,4 +20,13 @@ export class Game extends Phaser.Game {
 
         this.state.start('Boot');
     }
+
+    toggleFullScreen() {
+        if (this.scale.isFullScreen) {
+            this.scale.stopFullScreen();
+        }
+        else {
+            this.scale.startFullScreen(false);
+        }
+    }
 }

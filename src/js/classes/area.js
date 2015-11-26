@@ -14,8 +14,6 @@ export class Area extends Phaser.State {
     }
 
     create() {
-
-
         this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
         this.player = new Player(this.game, (dimensions.tileSize * 13), (dimensions.tileSize * 12), sprites.tileSet.key, 'down');
@@ -61,6 +59,8 @@ export class Area extends Phaser.State {
                 this.game.controlStates[controls[i].name] = false;
             });
         }
+
+        this.game.controls.select.onInputDown.add(this.game.toggleFullScreen, this);
     }
 
     update() {
@@ -79,6 +79,5 @@ export class Area extends Phaser.State {
         this.game.debug.text(`B: ${this.game.controlStates.b}`, 10, 120);
         this.game.debug.text(`Start: ${this.game.controlStates.start}`, 10, 140);
         this.game.debug.text(`Select: ${this.game.controlStates.select}`, 10, 160);
-
     }
 }

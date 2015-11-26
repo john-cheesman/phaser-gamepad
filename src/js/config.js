@@ -73,23 +73,23 @@ const frames = {
 const controls = [
     {
         name: 'up',
-        x: 50,
-        y: 190
+        x: 40,
+        y: 210
     },
     {
         name: 'down',
-        x: 50,
+        x: 40,
         y: 270
     },
     {
         name: 'left',
         x: 10,
-        y: 230
+        y: 240
     },
     {
         name: 'right',
-        x: 90,
-        y: 230
+        x: 70,
+        y: 240
     },
     {
         name: 'a',

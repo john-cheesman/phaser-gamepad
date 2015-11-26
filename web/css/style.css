@@ -4,8 +4,10 @@ html {
 
 body {
     margin: 0;
+    text-align: center;
 }
 
-.game-screen canvas {
-    margin: 0 auto;
+.game-screen {
+    display: inline-block;
+    margin-bottom: -4px;
 }
